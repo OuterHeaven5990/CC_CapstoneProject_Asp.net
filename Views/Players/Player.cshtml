@@ -1,0 +1,30 @@
+﻿
+@model Player
+@using CodeCademyCapstone.Models
+
+@{
+    ViewData["Title"] = "NFL Player - " + @Html.DisplayFor(model => model.Name);
+}
+
+<div class="jumbotron p-2">
+    <h1 class="display-4">
+        <img src="/image/nfl/logo/@(Model.TeamId).png">
+        @Html.DisplayFor(model => model.Number)
+        @Html.DisplayFor(model => model.Name)
+    </h1>
+</div>
+
+<div>@Model.Position</div>
+<hr />
+<div>Rating: @Model.Rating</div>
+<div>Rank: @Model.Rank</div>
+<div>Depth: @Model.Depth</div>
+<hr />
+<div>Experience: @Model.Experience</div>
+<div>College: @Model.College</div>
+<div>Draft: @Model.DraftYear - @Model.DraftRound - @Model.DraftPick</div>
+<hr />
+<div>Height: @Model.Height</div>
+<div>Weight: @Model.Weight</div>
+<div>Age @Model.Age</div>
+<div>Birthday: @Model.BirthDate</div>

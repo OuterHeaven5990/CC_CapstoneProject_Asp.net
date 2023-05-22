@@ -1,0 +1,11 @@
+﻿@model IEnumerable<CodeCademyCapstone.Models.League>
+
+
+@{
+    ViewData["Title"] = "League Home";
+}
+
+@* display the logo and league name *@
+<div class="jumbotron p-2 text-center">
+    <h2 class="display-3"><img src="/image/@(Model.First().LeagueId)/@(Model.First().LeagueId).png" >@Model.First().Name</h2>
+</div>
